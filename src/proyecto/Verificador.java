@@ -89,7 +89,7 @@ public class Verificador {
 			System.out.println("Realizando nuevas lecturas...\n");
 		}
 		
-		//Creación de arraylist de lecturas en las que se agregan los valores obtenidos por cada sensor
+		//Creacion de arraylist de lecturas en las que se agregan los valores obtenidos por cada sensor
 		ArrayList<Object> lecturas = new ArrayList<Object>();
 		
 		lecturas.add(temperatura);
@@ -100,7 +100,7 @@ public class Verificador {
 		AgenteColector agente1 = new AgenteColector(1, timeStamp, lecturas);
 			
 
-		//Creación de objetos JSON y JSONArray e insersion de datos recolectados por el agente colector
+		//Creacion de objetos JSON y JSONArray e insersion de datos recolectados por el agente colector
 		JSONObject obj = new JSONObject();
 		
 	
@@ -152,7 +152,7 @@ public class Verificador {
             JSONObject json = (JSONObject) obj2;
             
 
-       //Validación de datos a enviar al reportero, consultando en el historial si el timestamp está duplicado     
+       //Validacion de datos a enviar al reportero, consultando en el historial si el timestamp esta duplicado     
             if(json.get(fechahoraUTC) == null) {
             	
             	json.put(fechahoraUTC, fechahoraUTC);
@@ -197,7 +197,7 @@ public class Verificador {
 	        		System.out.println();
 	 
             	}
-            	//Handeling de errores en caso de que el reportero no se esté ejecuntando y no se realice la conexión
+            	//Handeling de errores en caso de que el reportero no se este ejecuntando y no se realice la conexion
         		catch(Exception e){
             		System.out.println("Error al conectarse con el reportero");
             		TimeUnit.SECONDS.sleep(5);
@@ -208,7 +208,7 @@ public class Verificador {
             //continuara realizando lecturas
             else {
             	TimeUnit.SECONDS.sleep(5);
-            	System.out.println("Datos duplicados, no se conectará con el reportero");
+            	System.out.println("Datos duplicados, no se conectara con el reportero");
             	
             }
             
