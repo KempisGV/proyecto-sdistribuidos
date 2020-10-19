@@ -84,7 +84,7 @@ public class Reportero {
     		JSONArray lecturaHistorialHum= new JSONArray();
     		JSONArray lecturaHistorialRad= new JSONArray();
     		
-    		//Lectura de reporteSensor.json y obtención de lecturas de cada sensor
+    		//Lectura de reporteSensor.json y obtencion de lecturas de cada sensor
         	Object reporteFile = parser.parse(new FileReader("reporteSensor.json"));
             JSONObject reporteJson = (JSONObject) reporteFile;
             JSONArray lecturas=  (JSONArray) reporteJson.get("lecturas");
