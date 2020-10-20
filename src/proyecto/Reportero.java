@@ -93,7 +93,7 @@ public class Reportero {
             JSONObject radiacion = (JSONObject) lecturas.get(2);
 
             //Obtencion de agenteID y fechahoraUTC de reporteJson
-            Long agenteID =(Long) reporteJson.get("agenteID");
+            Long agenteID =(Long) reporteJson.get("agente");
             String fechahoraUTC =(String) reporteJson.get("fechahoraUTC");
 
             //Obtencion de lecturas de sensor temperatura
@@ -139,9 +139,9 @@ public class Reportero {
             avgTemp = sumTemp/contadorTemp;
             
             //insercion de datos de objetos y array en reporte json de sensor temperatura
-            reporteTempJson.put("sensorID", temperatura.get("sensorID"));
+            reporteTempJson.put("sensor", temperatura.get("sensor"));
             reporteTempJson.put("lecturas", lecturaHistorialTemp);
-            reporteTempJson.put("agenteID", agenteID );
+            reporteTempJson.put("agente", agenteID );
             reporteTempJson.put("lectura_max", maxTemp);
             reporteTempJson.put("lectura_min", minTemp);
             reporteTempJson.put("lectura_med", avgTemp);
@@ -191,9 +191,9 @@ public class Reportero {
             avgHum = sumHum/contadorHum;
             
            // insercion de datos de objetos y array en reporte json de sensor humedad
-            reporteHumJson.put("sensorID", humedad.get("sensorID"));
+            reporteHumJson.put("sensor", humedad.get("sensor"));
             reporteHumJson.put("lecturas", lecturaHistorialHum);
-            reporteHumJson.put("agenteID",agenteID );
+            reporteHumJson.put("agente",agenteID );
             reporteHumJson.put("lectura_max", maxHum);
             reporteHumJson.put("lectura_min", minHum);
             reporteHumJson.put("lectura_med", avgHum);
@@ -241,9 +241,9 @@ public class Reportero {
             avgRad = sumRad/contadorRad;
             
             //insercion de datos de objetos y array en reporte json  radiacion solar
-            reporteRadJson.put("sensorID", radiacion.get("sensorID"));
+            reporteRadJson.put("sensor", radiacion.get("sensor"));
             reporteRadJson.put("lecturas", lecturaHistorialRad);
-            reporteRadJson.put("agenteID",agenteID );
+            reporteRadJson.put("agente",agenteID );
             reporteRadJson.put("lectura_max", maxRad);
             reporteRadJson.put("lectura_min", minRad);
             reporteRadJson.put("lectura_med", avgRad);
