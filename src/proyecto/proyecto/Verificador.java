@@ -110,7 +110,7 @@ public class Verificador {
 		list1.put("lectura", ((SensorTemperatura) agente1.getLecturas().get(0)).getLectura());
 		
 		JSONObject list2= new JSONObject();
-		list2.put("sensor,((SensorHumedad) agente1.getLecturas().get(1)).getSensorID());
+		list2.put("sensor",((SensorHumedad) agente1.getLecturas().get(1)).getSensorID());
 		list2.put("lectura", ((SensorHumedad) agente1.getLecturas().get(1)).getLectura());
 		
 		JSONObject list3= new JSONObject();
