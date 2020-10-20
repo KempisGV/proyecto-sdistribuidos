@@ -4,7 +4,7 @@
 * Mathias Loor
 
 # Instrucciones para compilar y ejecutar la aplicación en Ubuntu Server
-1. Ejecutar el comando `sudo ifconfig enp0s8 10.10.10.X`(x es el numero del nodo) para configurar la red interna de la máquina virtual.
+1. Ejecutar el comando `sudo ifconfig enp0s8 10.10.10.X`(x es el numero del nodo) para configurar la red interna de la máquina virtual, la máquina que hará de reportero deberá tener la ip 10.10.10.1 y la verificador 10.10.10.2
 2. Instalar el jdk de java utilizando el comando `sudo apt install default-jdk`.
 3. Para comprobar que java está instalado ejecutar el comando `javac`.
 4. Una vez ubicados en la carpeta del proyecto en la máquina virtual que hará de Reportero nos movemos a la ruta src/proyecto y se necesita agregar al classpath la libreria json-simple-1.1.jar, para esto se utilizará el comando `export CLASSPATH=json-simple-1.1.jar:$CLASSPATH`.
