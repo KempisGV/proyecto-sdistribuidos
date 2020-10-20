@@ -106,15 +106,15 @@ public class Verificador {
 	
 		JSONArray list= new JSONArray();
 		JSONObject list1= new JSONObject();
-		list1.put("sensorID",((SensorTemperatura) agente1.getLecturas().get(0)).getSensorID());
+		list1.put("sensor",((SensorTemperatura) agente1.getLecturas().get(0)).getSensorID());
 		list1.put("lectura", ((SensorTemperatura) agente1.getLecturas().get(0)).getLectura());
 		
 		JSONObject list2= new JSONObject();
-		list2.put("sensorID",((SensorHumedad) agente1.getLecturas().get(1)).getSensorID());
+		list2.put("sensor,((SensorHumedad) agente1.getLecturas().get(1)).getSensorID());
 		list2.put("lectura", ((SensorHumedad) agente1.getLecturas().get(1)).getLectura());
 		
 		JSONObject list3= new JSONObject();
-		list3.put("sensorID",((SensorRadiacion) agente1.getLecturas().get(2)).getSensorID());
+		list3.put("sensor",((SensorRadiacion) agente1.getLecturas().get(2)).getSensorID());
 		list3.put("lectura", ((SensorRadiacion) agente1.getLecturas().get(2)).getLectura());
 		
 		list.add(list1);
@@ -123,7 +123,7 @@ public class Verificador {
 		
 		obj.put("lecturas", list);
 		obj.put("fechahoraUTC", agente1.getFechahoraUTC());
-		obj.put("agenteID", agente1.getAgenteID());
+		obj.put("agente", agente1.getAgenteID());
 		//fin de insersion de datos a objeto JSON
 		
 		
@@ -190,9 +190,9 @@ public class Verificador {
 	                in.close();
 	                socket.close();
             	 
-	                //Se imprime por consola AgenteID y FechaHoraUTC una vez se enviaron los datos al reportero
+	                //Se imprime por consola Agente y FechaHoraUTC una vez se enviaron los datos al reportero
 	                TimeUnit.SECONDS.sleep(10);
-	                System.out.println("AgenteID: " + agente1.getAgenteID());
+	                System.out.println("Agente: " + agente1.getAgenteID());
 	        		System.out.println("FechaHoraUTC: " + agente1.getFechahoraUTC());
 	        		System.out.println();
 	 
